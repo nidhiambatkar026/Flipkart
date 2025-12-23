@@ -3,245 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flipkart UI – Premium Design</title>
+  <title>Flipkart UI – Multi Page Design</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+  <link rel="stylesheet" href="style.css" />
 
-    body {
-      background: linear-gradient(to bottom, #f1f3f6, #ffffff);
-    }
-
-    /* Navbar */
-    .navbar {
-      background: linear-gradient(90deg, #2874f0, #1b5fd6);
-      padding: 12px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo {
-      font-size: 26px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-
-    .search-box {
-      width: 45%;
-    }
-
-    .search-box input {
-      width: 100%;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 30px;
-      outline: none;
-    }
-
-    .nav-links a {
-      color: white;
-      margin-left: 25px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #ffe500;
-    }
-
-    /* Categories */
-    .categories {
-      display: flex;
-      justify-content: space-evenly;
-      background: white;
-      padding: 18px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .category {
-      font-weight: 600;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .category::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background: #2874f0;
-      left: 0;
-      bottom: -5px;
-      transition: 0.3s;
-    }
-
-    .category:hover::after {
-      width: 100%;
-    }
-
-    /* Hero Banner */
-    .banner {
-      margin: 30px;
-      height: 320px;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9') center/cover;
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      padding-left: 50px;
-      color: white;
-    }
-
-    .banner h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .banner p {
-      font-size: 18px;
-    }
-
-    /* Products */
-    .products {
-      padding: 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
-
-    .product-card {
-      background: white;
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .product-card h3 {
-      font-size: 17px;
-      margin: 12px 0;
-    }
-
-    .price {
-      color: #2e7d32;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    .btn {
-      margin-top: 12px;
-      padding: 8px 18px;
-      background: #2874f0;
-      border: none;
-      color: white;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #1b5fd6;
-    }
-
-    /* Footer */
-    footer {
-      background: #172337;
-      color: #ddd;
-      padding: 25px;
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo">Flipkart</div>
-    <div class="search-box">
-      <input type="text" placeholder="Search for products, brands and more" />
-    </div>
-    <div class="nav-links">
-      <a href="#">Login</a>
-      <a href="#">Cart 🛒</a>
-    </div>
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo">Flipkart</div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#login">Login</a>
   </div>
+</div>
 
-  <!-- Categories -->
-  <div class="categories">
-    <div class="category">Mobiles</div>
-    <div class="category">Fashion</div>
-    <div class="category">Electronics</div>
-    <div class="category">Home</div>
-    <div class="category">Appliances</div>
-    <div class="category">Travel</div>
-  </div>
-
-  <!-- Banner -->
+<!-- Home -->
+<section id="home">
   <div class="banner">
     <div>
       <h1>Big Billion Deals</h1>
-      <p>Top brands • Best prices • Limited time offers</p>
+      <p>Best products at best prices</p>
     </div>
   </div>
 
-  <!-- Products -->
   <div class="products">
     <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35b4" />
+      <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35b4">
       <h3>Smartphone</h3>
       <p class="price">₹14,999</p>
-      <button class="btn">Add to Cart</button>
     </div>
     <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1518441902110-9f7b05b78f41" />
-      <h3>Wireless Headphones</h3>
-      <p class="price">₹1,999</p>
-      <button class="btn">Add to Cart</button>
-    </div>
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" />
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
       <h3>Smart Watch</h3>
       <p class="price">₹2,499</p>
-      <button class="btn">Add to Cart</button>
-    </div>
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" />
-      <h3>Laptop</h3>
-      <p class="price">₹55,999</p>
-      <button class="btn">Add to Cart</button>
     </div>
   </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 Flipkart UI Clone • Designed by Student • Educational Purpose Only
-  </footer>
+<!-- About -->
+<section id="about">
+  <h2>About Flipkart</h2>
+  <div class="form-box">
+    <p>Flipkart is one of India's leading e-commerce platforms, offering a wide range of products including electronics, fashion, home essentials, and more. This project is a UI clone created for learning and educational purposes.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="form-box">
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button class="btn">Send Message</button>
+  </div>
+</section>
+
+<!-- Login -->
+<section id="login">
+  <h2>Login</h2>
+  <div class="form-box">
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button class="btn">Login</button>
+  </div>
+</section>
+
+<footer>
+  © 2025 Flipkart UI Clone | Educational Purpose Only
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
