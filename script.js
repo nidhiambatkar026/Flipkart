@@ -19,7 +19,7 @@
     if (username === '' || password === '') {
       alert('Please fill in all fields');
     } else {
-      alert('Login successful (Demo only)');
+      alert('Login successful');
       inputs[0].value = '';
       inputs[1].value = '';
     }
@@ -37,7 +37,7 @@
     if (!name || !email || !message) {
       alert('Please fill all contact details');
     } else {
-      alert('Message sent successfully (Demo only)');
+      alert('Message sent successfully');
       contactSection.querySelectorAll('input, textarea').forEach(el => el.value = '');
     }
   });
@@ -45,6 +45,6 @@
   // Add to cart demo
   document.querySelectorAll('.product-card').forEach(card => {
     card.addEventListener('click', () => {
-      alert('Item added to cart (Demo only)');
+      alert('Item added to cart ');
     });
   });
